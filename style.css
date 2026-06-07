@@ -1,0 +1,124 @@
+/* Style */
+body,html{
+    background-color: #202124;
+    color:white;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+    
+}
+
+
+#header{
+    font-size: 96px;
+    text-align: center;
+    margin: 0;
+    font-family: "Advent Pro", sans-serif;
+    font-weight: 100;
+    letter-spacing: 18%;
+    background:  linear-gradient(190deg,rgba(0, 253, 177, 1) 0%, rgba(0, 153, 255, 1) 100%);;
+    color: transparent;
+    background-clip: text;
+    animation: slidein 1s;
+
+}
+
+
+.input-output{
+    border-radius: 10px;
+    width: fit-content;
+    background: #444444;
+    padding: 10px;
+    font-size: 14px;
+}
+.input{
+    background: #444444;
+    border-radius: 40px;
+    width: 30vw;
+    height: 40vh;
+    text-align: left;
+    resize:none;
+    padding: 15px;
+    color: white;
+    font-size:24px
+
+}
+
+#left,#right,#row{
+    display: inline-block;
+    width: fit-content;
+    animation-name: zoomInAnimation;
+    animation-duration: 1s;
+
+}
+#row{
+    font-size: 74px;
+    margin: 0 20px;
+}
+#shaman{
+    border-radius: 50px;
+    padding-bottom: 20px;
+    border: black 4px solid;
+    padding: 10px 20px;
+    width: 90vw;
+    background-color: #6c6c6c;
+    color:#00ffbb;
+    font-size: 72px;
+    font-family: "Advent Pro", sans-serif;
+    letter-spacing: 18%;
+    box-shadow: 0px 2px 50px 0px rgba(24, 89, 139, 0.83);
+    animation: pulseAnimation 0.6s 2.5s, slideUpAnimation 1s;
+}
+#rows::before{
+    content: "↔";
+}
+
+/* Animation*/
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes zoomInAnimation {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes pulseAnimation {
+  0%{ transform: scale(0.65); }
+  100% { transform: scale(1); }
+}
+@keyframes slideUpAnimation {
+  0% { transform: translateY(400px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Optimization */
+@media (max-width: 480px) {
+    #header{
+        font-size:45px;
+    }
+    .input{
+        width: 90vw;
+    }
+    #row,#rows{
+        margin: 0;
+        padding:0;
+        font-size:60px;
+    }
+    #rows::before{
+        content: "\A↕";
+        white-space: pre-wrap !important; 
+    }
+    #shaman{
+        font-size:20px
+    }
+}
