@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Babushka</title>
-    <link rel="icon" href="https://masterpiecer-images.s3.yandex.net/f787cd3867a511ee8ccd92669a1675b3:upscaled" type="image/x-icon">
+    <link rel="icon" href="ai.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
